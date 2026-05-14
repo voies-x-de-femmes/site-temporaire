@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,8 +34,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      padding: 20px;
+      gap: 14px;
+      padding: 16px;
       text-align: center;
     }
 
@@ -44,13 +44,15 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      flex-shrink: 1;
+      min-height: 0;
     }
 
     .image-container img {
       display: block;
       width: 100%;
       height: auto;
-      max-height: 80vh;
+      max-height: 68vh;
       object-fit: contain;
     }
 
@@ -59,26 +61,61 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-shrink: 0;
     }
 
     .link-container a {
       text-decoration: none;
       font-size: 14px;
+      color: red;
+      word-break: break-word;
     }
 
     .link-container a:hover {
       text-decoration: underline;
     }
 
+    .description {
+      max-width: 900px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: red;
+      flex-shrink: 0;
+    }
+
     @media (min-width: 900px) {
       .image-container img {
         width: 50vw;
+      }
+
+      .description {
+        font-size: 15px;
       }
     }
 
     @media (max-width: 899px) {
       .image-container img {
         width: 100vw;
+      }
+
+      .description {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-height: 700px) {
+      .wrapper {
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .image-container img {
+        max-height: 58vh;
+      }
+
+      .description,
+      .link-container a {
+        font-size: 12px;
       }
     }
   </style>
@@ -88,13 +125,17 @@
   <div class="wrapper">
 
     <div class="image-container">
-      <img src="./Logo.jpeg" alt="logo of copany">
+      <img src="./Logo.jpeg" alt="logo of company">
     </div>
 
     <div class="link-container">
       <a href="mailto:voiesxdefemmes.association@gmail.com">
         voiesxdefemmes.association@gmail.com
       </a>
+    </div>
+
+    <div class="description">
+      Promouvoir, transmettre et faire rayonner la création artistique des femmes d’hier et d’aujourd’hui, à travers la connaissance, l’enseignement et la diffusion de leurs œuvres.
     </div>
 
   </div>
